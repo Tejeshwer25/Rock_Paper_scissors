@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+body {
+    background-color: rgb(28, 28, 59);
+    color: gold;
+}
+
+header {
+    padding: 1rem 0rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.score-board {
+    border: 2px solid white;
+    width: 30%;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+    padding: 1rem 0rem;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.badge {
+    font-size: 0.9rem;
+    position: absolute;
+}
+
+#comp-label {
+    right: -20%;
+    top: 30%;
+    background-color: gold;
+    color: rgb(28, 28, 59);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+
+#user-label {
+    left: -15%;
+    top: 30%;
+    background-color: gold;
+    color: rgb(28, 28, 59);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+
+.result {
+    margin: 3rem 0rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.choice {
+    width: 20%;
+    text-align: center;
+    border: 3px solid white ;
+    border-radius: 50%;
+    padding: 1.5rem 0rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.choice:hover {
+    border: 3px solid grey;
+    cursor: pointer;
+    background: rgb(8, 8, 17);
+}
+
+.choice > img {
+    width: 50%;
+}
+
+.action_text {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.choices > .win {
+    border: 3px solid green;
+    box-shadow: 1px 1px 15px green;
+}
+
+.choices > .lost {
+    border: 3px solid red;
+    box-shadow: 1px 1px 15px red;
+}
+
+.choices > .draw {
+    border: 3px solid yellow;
+    box-shadow: 1px 1px 15px yellow;
+}
+
+@media(max-width:700px) {
+    .score-board {
+        padding: 2rem 0rem;
+    }
+
+    #user-label {
+        left: -20%;
+    }
+
+    #comp-label {
+        right: -30%;
+    }
+}
+
+@media (max-width: 600px) {
+    #user-label {
+        transform: rotate(90deg);
+    }
+
+    #comp-label {
+        right: -30%;
+        top: 35%;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 450px) {
+    .score-board {
+        width: 70%;
+    }
+}
